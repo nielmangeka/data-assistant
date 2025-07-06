@@ -1,0 +1,14 @@
+[project]
+name = "data-assistant"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+    "dotenv>=0.9.9",
+    "google-api-python-client>=2.175.0",
+    "google-cloud-bigquery>=3.34.0",
+    "openai>=1.93.0",
+    "redis>=6.2.0",
+    "tool>=0.8.0",
+]
