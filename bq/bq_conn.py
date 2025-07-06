@@ -10,13 +10,12 @@ class BQConnection():
     def __init__(self):
         # Set up BigQuery client
         self.SCOPES = ['https://www.googleapis.com/auth/cloud-platform'] 
-        self.credens = Credentials.from_service_account_file(
-            './creds/creds.json',
+        self.credens = Credentials.from_service_account_file(<BQ_SERVICE_ACCOUNT_FILE_PATH>,
             scopes=self.SCOPES
         )
 
-        self.project_id = 'indosat-463417'
-        self.dataset_id = 'raw'
+        self.project_id = <BQ_PROJECT_ID>
+        self.dataset_id = <BQ_DATESET_ID>
         self.client = bigquery.Client(credentials=self.credens, project=self.project_id)
         self.dataset_ref = self.client.dataset(self.dataset_id, project=self.project_id)
     
