@@ -3,11 +3,11 @@ import time
 
 class RedisConfig():
     def __init__(self):
-        self.host='redis-13711.c256.us-east-1-2.ec2.redns.redis-cloud.com'
-        self.port = 13711
-        self.db = 0
-        self.username='default'
-        self.password='OJPKy5djqIE2r1Na2b5DYctuCpei9bDa'
+        self.host=<REDIS_DB_HOST>
+        self.port=<REDIS_DB_PORT>
+        self.db=0
+        self.username=<REDIS_DB_USERNAME>
+        self.password=<REDIS_DB_PASS>
     
     def redis_conn(self):
         r_conn = redis.Redis(
